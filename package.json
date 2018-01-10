@@ -1,0 +1,44 @@
+{
+  "name": "matrix-trainer",
+  "version": "0.0.0",
+  "description": "A website to train yourself to multiple and add matrix.",
+  "main": "index.js",
+  "scripts": {
+    "build-js": "cd javascripts/ && browserify bundle.js -o scripts.js -t [ babelify --presets es2015 ]",
+    "build-css": "cd stylessheets/ && uglifycss bundle.css > styles.css",
+    "build": "npm run build-css & npm run build-js",
+    "watch-js": "watch -p \"javascripts/bundle.js\" -c \"npm run build-js\"",
+    "watch-css": "watch -p \"stylessheets/bundle.css\" -c \"npm run build-css\"",
+    "watch": "npm run watch-css & npm run watch-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedced19/matrix-trainer.git"
+  },
+  "keywords": [
+    "matrix",
+    "trainer",
+    "multiple",
+    "add"
+  ],
+  "author": "Cédric JUNG <cedced19@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cedced19/matrix-trainer/issues"
+  },
+  "homepage": "https://github.com/cedced19/matrix-trainer#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^15.0.0",
+    "watch-cli": "^0.2.3"
+  },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "int-matrix-generator": "0.0.0",
+    "ml-matrix": "^5.0.1",
+    "random-int": "^1.0.0",
+    "uglifycss": "0.0.27"
+  }
+}
