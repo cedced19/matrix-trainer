@@ -51,8 +51,6 @@ function displayExercise (ex, op) {
     exoContainer.appendChild(child)
 }
 
-
-
 function main () {
     while (exoContainer.firstChild) {
         exoContainer.removeChild(exoContainer.firstChild);
