@@ -1,3 +1,5 @@
 node_modules/
-javascripts/scripts.js*
-stylessheets/styles.css*
+javascripts/*.js*
+!javascripts/scripts.js
+stylessheets/*.css
+!stylessheets/styles.css*
