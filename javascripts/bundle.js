@@ -51,5 +51,16 @@ function displayExercise (ex, op) {
     exoContainer.appendChild(child)
 }
 
-displayExercise(generateMatrixsToMultiple(), '×');
-displayExercise(generateMatrixsToAdd(), '+');
+
+
+function main () {
+    while (exoContainer.firstChild) {
+        exoContainer.removeChild(exoContainer.firstChild);
+    }
+    displayExercise(generateMatrixsToMultiple(), '×');
+    displayExercise(generateMatrixsToAdd(), '+');
+}
+
+document.getElementById('btn').onclick = main;
+
+main();
