@@ -4,7 +4,7 @@
   "description": "A website to train yourself to multiple and add matrix.",
   "main": "index.js",
   "scripts": {
-    "build-js": "cd javascripts/ && browserify bundle.js -o scripts.js -t [ babelify --presets es2015 ]",
+    "build-js": "cd javascripts/ && browserify bundle.js -o scripts.js -t [ babelify --presets es2015 ] -g uglifyify",
     "build-css": "cd stylessheets/ && uglifycss bundle.css > styles.css",
     "build": "npm run build-css & npm run build-js",
     "watch-js": "watch -p \"javascripts/bundle.js\" -c \"npm run build-js\"",
@@ -32,6 +32,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^8.0.0",
     "browserify": "^15.0.0",
+    "uglifyify": "^4.0.5",
     "watch-cli": "^0.2.3"
   },
   "dependencies": {
