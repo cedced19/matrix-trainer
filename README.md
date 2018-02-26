@@ -1,2 +1,2 @@
 # matrix-trainer
-A website to train yourself to multiple and add matrix.
+A website to train yourself to multiply and add matrices.
